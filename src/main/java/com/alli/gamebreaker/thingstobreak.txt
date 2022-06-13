@@ -1,0 +1,6 @@
+minecarts
+swap both sine and cosine with tangent - DONE: chaos
+hoppers: make em just fukin shoot items out at random angles in the direction they're facing
+bogosort inventory???
+inaccurate fast inverse square root
+change the gravity function to continuously increase acceleration
