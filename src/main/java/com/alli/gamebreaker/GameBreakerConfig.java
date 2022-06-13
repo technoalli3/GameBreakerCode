@@ -36,6 +36,9 @@ public class GameBreakerConfig implements Config {
     @Comment("Rotating clockwise?")
     public boolean rotateClockwise = false;
 
+    @Comment("Override subtitles?")
+    public boolean overrideSubtitles = true;
+
     @Comment("Override sounds?")
     public boolean overrideSounds = true;
 
