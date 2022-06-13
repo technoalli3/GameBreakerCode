@@ -49,7 +49,7 @@ public abstract class ShuffleInventoryMixin {
         World world = ((LivingEntity)(Object)this).getWorld();
         if(CONFIG.shuffleInventory) {
             if(!world.isClient) {
-                if (shuffleCooldown >= 3600) {//3600
+                if (shuffleCooldown >= CONFIG.shuffleDelay) {
                     shuffleCooldown = 0;
                     Inventory inventory = this.getInventory();
 

@@ -28,8 +28,7 @@
     "SugarCaneMixin",
     "TransformMixin",
     "WeightedSoundsMixin",
-    "WorldRendererMixin",
-    "ZombieAttackMixin"
+    "WorldRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
