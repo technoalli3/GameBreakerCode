@@ -20,7 +20,7 @@ public class ChunkNoiseMixin {
     @Inject(method = "getHeight", at = @At("TAIL"), cancellable = true)
     private void changeHeight(int x, int z, Heightmap.Type heightmap, HeightLimitView world, NoiseConfig noiseConfig, CallbackInfoReturnable<Integer> cir) {
         if(CONFIG.altWorldGen) {
-            cir.setReturnValue(rand.nextInt()); 
+            cir.setReturnValue(rand.nextInt());
         }
     }
 
