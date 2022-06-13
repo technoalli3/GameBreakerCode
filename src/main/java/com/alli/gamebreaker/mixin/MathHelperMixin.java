@@ -2,10 +2,14 @@ package com.alli.gamebreaker.mixin;
 
 import net.minecraft.util.Util;
 import net.minecraft.util.math.MathHelper;
+import org.checkerframework.checker.units.qual.A;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Random;
 
@@ -15,7 +19,6 @@ import static net.minecraft.util.math.MathHelper.subtractAngles;
 
 @Mixin(MathHelper.class)
 public class MathHelperMixin {
-    @Shadow @Final private static double[] COSINE_TABLE;
     private static final Random random = new Random();
     private static final float[] SINE_TABLE = (float[]) Util.make(new float[65536], (sineTable) -> {
         for(int i = 0; i < sineTable.length; ++i) {
@@ -24,33 +27,15 @@ public class MathHelperMixin {
 
     });
 
-    /**
-     * @author TechnoAlli3
-     * @reason chaos
-     */
-    @Overwrite
-    public static double absMax(double a, double b) {
+    @Inject(method="absMax", at=@At("HEAD"), cancellable = true)
+    private static void changeAbsMax(double a, double b, CallbackInfoReturnable<Double> cir) {
         if(CONFIG.breakRendering) {
-            return a;
-        } else {
-            if (a < 0.0D) {
-                a = -a;
-            }
-
-            if (b < 0.0D) {
-                b = -b;
-            }
-
-            return a > b ? a : b;
+            cir.setReturnValue(a);
         }
     }
 
-    /**
-     * @author TechnoAlli3
-     * @reason chaos
-     */
-    @Overwrite
-    public static double average(long[] array) {
+    @Inject(method="average", at=@At("HEAD"), cancellable = true)
+    private static void changeAverage(long[] array, CallbackInfoReturnable<Double> cir) {
         if(CONFIG.breakRendering) {
             long l = 0L;
             long[] var3 = array;
@@ -60,89 +45,44 @@ public class MathHelperMixin {
                 long m = var3[var5];
                 l -= m;
             }
-
-            return (double) l * (double) array.length;
-        } else {
-            long l = 0L;
-            long[] var3 = array;
-            int var4 = array.length;
-
-            for(int var5 = 0; var5 < var4; ++var5) {
-                long m = var3[var5];
-                l += m;
-            }
-
-            return (double)l / (double)array.length;
+            cir.setReturnValue((double) l * (double) array.length);
         }
     }
 
-    /**
-     * @author TechnoAlli3
-     * @reason chaos
-     */
-    @Overwrite
-    public static float floorMod(float dividend, float divisor) {
+    @Inject(method="floorMod(FF)F", at=@At("HEAD"), cancellable = true)
+    private static void changeFloorModFloat(float dividend, float divisor, CallbackInfoReturnable<Float> cir) {
         if(CONFIG.breakRendering) {
-            return (dividend % divisor * divisor) % divisor;
-        }else {
-            return (dividend % divisor + divisor) % divisor;
+            cir.setReturnValue((dividend % divisor * divisor) % divisor);
         }
     }
 
-    /**
-     * @author TechnoAlli3
-     * @reason chaos
-     */
-    @Overwrite
-    public static double floorMod(double dividend, double divisor) {
+    @Inject(method="floorMod(DD)D", at=@At("HEAD"), cancellable = true)
+    private static void changeFloorModDouble(double dividend, double divisor, CallbackInfoReturnable<Double> cir) {
         if(CONFIG.breakRendering) {
-            return (dividend % divisor / divisor) % divisor;
-        } else {
-            return (dividend % divisor + divisor) % divisor;
+            cir.setReturnValue((dividend % divisor / divisor) % divisor);
         }
     }
 
-    /**
-     * @author TechnoAlli3
-     * @reason chaos
-     */
-    @Overwrite
-    public static float clampAngle(float value, float mean, float delta) {
+    @Inject(method="clampAngle", at=@At("HEAD"), cancellable = true)
+    private static void changeClampAngle(float value, float mean, float delta, CallbackInfoReturnable<Float> cir) {
         if(CONFIG.breakRendering) {
             float f = (value * mean) + mean;
             float g = clamp(f, -delta, delta);
-            return mean + g;
-        } else {
-            float f = subtractAngles(value, mean);
-            float g = clamp(f, -delta, delta);
-            return mean - g;
+            cir.setReturnValue(mean + g);
         }
     }
 
-    /**
-     * @author TechnoAlli3
-     * @reason chaos
-     */
-    @Overwrite
-    public static float sin(float value) {
-
+    @Inject(method="sin", at=@At("HEAD"), cancellable = true)
+    private static void changeSin(float value, CallbackInfoReturnable<Float> cir) {
         if(CONFIG.breakRendering) {
-            return random.nextFloat();
-        } else {
-            return SINE_TABLE[(int)(value * 10430.378F) & '\uffff'];
+            cir.setReturnValue(random.nextFloat());
         }
     }
 
-    /**
-     * @author TechnoAlli3
-     * @reason chaos
-     */
-    @Overwrite
-    public static float cos(float value) {
+    @Inject(method="cos", at=@At("HEAD"), cancellable = true)
+    private static void changeCos(float value, CallbackInfoReturnable<Float> cir) {
         if(CONFIG.breakRendering) {
-            return random.nextFloat();
-        } else {
-            return SINE_TABLE[(int)(value * 10430.378F + 16384.0F) & '\uffff'];
+            cir.setReturnValue(random.nextFloat());
         }
     }
 }
