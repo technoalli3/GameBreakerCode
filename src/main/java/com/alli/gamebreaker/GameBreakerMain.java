@@ -23,6 +23,7 @@ public class GameBreakerMain implements ModInitializer {
     public static final Identifier[] list = new Identifier[] {END_SKY, BOOK_TEXTURE, FURNACE_TEXTURE, SUN, CLOUDS, FORCEFIELD, RAIN, SNOW, MOON_PHASES};
 
 
+
     @Override
     public void onInitialize() {
         ModBlocks.registerBlocks();

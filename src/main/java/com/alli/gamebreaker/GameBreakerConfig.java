@@ -33,6 +33,9 @@ public class GameBreakerConfig implements Config {
     @Comment("Enable alternate world generation?")
     public boolean altWorldGen = true;
 
+    @Comment("Plants can be placed anywhere?")
+    public boolean plantAnywhere = true;
+
     @Comment("Add gibberish to tooltips?")
     public boolean addGibberish = true;
 

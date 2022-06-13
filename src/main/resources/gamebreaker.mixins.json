@@ -4,32 +4,32 @@
   "package": "com.alli.gamebreaker.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "PlantBlockMixin",
     "BiomeEffectsMixin",
-    "FoliageColoursMixin",
-    "PlayerEntityMixin",
+    "ChunkNoiseMixin",
     "CraftingResultMixin",
     "DoublePerlinMixin",
-    "ChunkNoiseMixin",
+    "FoliageColoursMixin",
+    "PlantBlockMixin",
+    "PlayerEntityMixin",
     "SlotMixin"
   ],
   "client": [
     "BipedModelMixin",
     "CreeperEntityMixin",
+    "DilateSkeletonMixin",
     "FloatingItemMixin",
+    "HandledScreenMixin",
+    "HardcodedColourFixMixin",
     "MathHelperMixin",
     "QuadrupedModelMixin",
     "RotateClockwiseMixin",
     "ShuffleInventoryMixin",
+    "SoundMixin",
     "SugarCaneMixin",
-    "ZombieAttackMixin",
-    "DilateSkeletonMixin",
     "TransformMixin",
-    "WorldRendererMixin",
-    "HandledScreenMixin",
-    "HardcodedColourFixMixin",
     "WeightedSoundsMixin",
-    "SoundMixin"
+    "WorldRendererMixin",
+    "ZombieAttackMixin"
   ],
   "injectors": {
     "defaultRequire": 1
