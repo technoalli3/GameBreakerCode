@@ -15,7 +15,7 @@ public class SoundMixin {
     @Inject(method="getLocation", at=@At("HEAD"), cancellable = true)
     private void changeSound(CallbackInfoReturnable<Identifier> cir) {
         if(CONFIG.overrideSounds) {
-            cir.setReturnValue(new Identifier(MOD_ID, "sounds/oof.ogg"));
+            cir.setReturnValue(new Identifier(MOD_ID, "sounds/ping.ogg"));
         }
     }
 }
