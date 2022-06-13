@@ -22,7 +22,6 @@
     "RotateClockwiseMixin",
     "ShuffleInventoryMixin",
     "SugarCaneMixin",
-    "ZombieAttackMixin",
     "DilateSkeletonMixin",
     "TransformMixin",
     "WorldRendererMixin",

@@ -81,4 +81,7 @@ public class GameBreakerConfig implements Config {
 
     @Comment("Rearrange inventory slots?")
     public boolean rearrangeInventory = false;
+
+    @Comment("If the above is true, changing this number\nwill change the delay IN TICKS between shuffles")
+    public int shuffleDelay = 3600;
 }

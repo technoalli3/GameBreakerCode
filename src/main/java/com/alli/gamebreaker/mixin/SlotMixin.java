@@ -25,7 +25,7 @@ public class SlotMixin {
     @Shadow @Final public int y;
 
     @Inject(method="<init>", at=@At("TAIL"))
-    private void breakThis(Inventory inventory, int index, int x, int y, CallbackInfo ci) {
+    private void rearrangeSlots(Inventory inventory, int index, int x, int y, CallbackInfo ci) {
         if(CONFIG.rearrangeInventory) {
             this.x = rand.nextInt(256);
             this.y = rand.nextInt(256);
