@@ -1,9 +1,7 @@
 package com.alli.gamebreaker;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 
 import java.util.ArrayList;
