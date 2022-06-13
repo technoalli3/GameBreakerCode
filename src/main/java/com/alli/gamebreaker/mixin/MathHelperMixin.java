@@ -1,6 +1,5 @@
 package com.alli.gamebreaker.mixin;
 
-import com.alli.gamebreaker.GameBreakerConfig;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.MathHelper;
 import org.spongepowered.asm.mixin.Final;
@@ -11,7 +10,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import java.util.Random;
 
 import static com.alli.gamebreaker.GameBreakerMain.CONFIG;
-import static net.minecraft.util.math.MathHelper.*;
+import static net.minecraft.util.math.MathHelper.clamp;
+import static net.minecraft.util.math.MathHelper.subtractAngles;
 
 @Mixin(MathHelper.class)
 public class MathHelperMixin {

@@ -1,6 +1,5 @@
 package com.alli.gamebreaker.mixin;
 
-import com.alli.gamebreaker.GameBreakerMain;
 import net.minecraft.util.math.noise.DoublePerlinNoiseSampler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

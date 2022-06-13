@@ -18,9 +18,6 @@
 
   "environment": "*",
   "entrypoints": {
-    "terrablender": [
-      "com.alli.gamebreaker.GameBreakerTerraBlender"
-    ],
     "client": [
       "com.alli.gamebreaker.GameBreakerClient"
     ],

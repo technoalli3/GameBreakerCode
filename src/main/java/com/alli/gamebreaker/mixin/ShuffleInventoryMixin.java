@@ -14,7 +14,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Random;
-import java.util.Stack;
 
 import static com.alli.gamebreaker.GameBreakerMain.CONFIG;
 

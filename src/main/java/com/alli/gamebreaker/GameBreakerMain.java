@@ -3,23 +3,7 @@ package com.alli.gamebreaker;
 import com.alli.gamebreaker.blocks.ModBlocks;
 import draylar.omegaconfig.OmegaConfig;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.noise.DoublePerlinNoiseSampler;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.GenerationSettings;
-import net.minecraft.world.gen.carver.Carver;
-import net.minecraft.world.gen.carver.CarverConfig;
-import net.minecraft.world.gen.random.RandomSeed;
-import net.minecraft.world.gen.stateprovider.RandomizedIntBlockStateProvider;
-import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
-import org.checkerframework.checker.units.qual.C;
-
-import java.util.UUID;
 
 import static net.minecraft.client.gui.screen.ingame.BookScreen.BOOK_TEXTURE;
 
