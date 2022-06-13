@@ -39,6 +39,16 @@ public class GameBreakerConfig implements Config {
     @Comment("Override sounds?")
     public boolean overrideSounds = true;
 
+    @Comment("""
+            If the above is true, set the variable below according to the listed chart:
+            
+            1: Discord Ping
+            2: OG player hurt sound
+            3: Heh
+            
+            """)
+    public int chosenSound = 1;
+
     @Comment("Shuffle inventory?")
     public boolean shuffleInventory = true;
 
