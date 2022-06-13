@@ -14,7 +14,7 @@
   },
 
   "license": "LGPL-3.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/gamebreaker/icon.png",
 
   "environment": "*",
   "entrypoints": {
