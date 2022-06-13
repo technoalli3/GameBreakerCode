@@ -3,10 +3,10 @@
   "id": "gamebreaker",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Alli's Gamebreaker",
+  "description": "TBreak the game - Alli style!",
   "authors": [
-    "Me!"
+    "TechnoAlli3"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
