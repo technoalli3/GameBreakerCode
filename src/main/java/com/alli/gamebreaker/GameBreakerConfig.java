@@ -30,6 +30,9 @@ public class GameBreakerConfig implements Config {
     @Comment("Break rendering?")
     public boolean breakRendering = false;
 
+    @Comment("Enable alternate world generation?")
+    public boolean altWorldGen = true;
+
     @Comment("Add gibberish to tooltips?")
     public boolean addGibberish = true;
 
