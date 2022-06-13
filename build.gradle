@@ -12,8 +12,6 @@ group = project.maven_group
 
 repositories {
 	maven { url 'https://jitpack.io' }
-	// TerraBlender
-	maven { url = 'https://maven.minecraftforge.net/' }
 }
 
 dependencies {
@@ -28,9 +26,6 @@ dependencies {
 	//Omega config
 	include("com.github.Draylar.omega-config:omega-config-base:${project.omega_config_version}")
 	modImplementation("com.github.Draylar.omega-config:omega-config-base:${project.omega_config_version}")
-
-	//TerraBlender
-	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.18.2-1.1.0.99'
 }
 
 processResources {

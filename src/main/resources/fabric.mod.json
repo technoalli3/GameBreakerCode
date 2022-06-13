@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Alli's Gamebreaker",
-  "description": "TBreak the game - Alli style!",
+  "description": "Break the game - Alli style!",
   "authors": [
     "TechnoAlli3"
   ],
@@ -14,13 +14,10 @@
   },
 
   "license": "LGPL-3.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/gamebreaker/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "terrablender": [
-      "com.alli.gamebreaker.GameBreakerTerraBlender"
-    ],
     "client": [
       "com.alli.gamebreaker.GameBreakerClient"
     ],
