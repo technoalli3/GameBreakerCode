@@ -6,10 +6,12 @@
 	"mixins": [
       "BiomeEffectsMixin",
       "FoliageColoursMixin",
-      "PlantBlockMixin"
+      "PlantBlockMixin",
+      "DoublePerlinMixin"
     ],
 	"client": [
-      "SoundMixin"
+      "SoundMixin",
+      "HardcodedColourFixMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
