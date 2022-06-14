@@ -3,9 +3,11 @@
 	"minVersion": "0.8",
 	"package": "com.alli.gamebreaker.mixin",
 	"compatibilityLevel": "JAVA_17",
-	"mixins": [],
+	"mixins": [
+      "BiomeEffectsMixin"
+    ],
 	"client": [
-
+      "SoundMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
