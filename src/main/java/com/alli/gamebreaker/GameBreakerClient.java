@@ -14,7 +14,7 @@ public class GameBreakerClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient(ModContainer mod) {
-		ItemTooltipCallback.EVENT.register((stack, context, list) -> {
+		ItemTooltipCallback.EVENT.register((stack, player, context, list) -> {
 			List<Text> list2 = new ArrayList<>();
 			List<Integer> order = new ArrayList<>();
 
