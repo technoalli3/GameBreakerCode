@@ -14,15 +14,14 @@ import static com.alli.gamebreaker.GameBreakerMain.MOD_ID;
 public class SoundMixin {
 	@Inject(method="getLocation", at=@At("HEAD"), cancellable = true)
 	private void changeSound(CallbackInfoReturnable<Identifier> cir) {
-		if(CONFIG.overrideSounds) {
-			int soundIndex = CONFIG.chosenSound;
-			if(soundIndex == 1) {
-				cir.setReturnValue(new Identifier(MOD_ID, "sounds/ping.ogg"));
-			} else if(soundIndex == 2) {
-				cir.setReturnValue(new Identifier(MOD_ID, "sounds/oof.ogg"));
-			} else if(soundIndex == 3) {
-				cir.setReturnValue(new Identifier(MOD_ID, "sounds/heh.ogg"));
-			}
+		//wrap in isEnabled config
+		int soundIndex = 1; //set to value from config
+		if(soundIndex == 1) {
+			cir.setReturnValue(new Identifier(MOD_ID, "sounds/ping.ogg"));
+		} else if(soundIndex == 2) {
+			cir.setReturnValue(new Identifier(MOD_ID, "sounds/oof.ogg"));
+		} else if(soundIndex == 3) {
+			cir.setReturnValue(new Identifier(MOD_ID, "sounds/heh.ogg"));
 		}
 	}
 }

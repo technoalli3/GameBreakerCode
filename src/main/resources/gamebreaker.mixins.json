@@ -4,7 +4,9 @@
 	"package": "com.alli.gamebreaker.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-      "BiomeEffectsMixin"
+      "BiomeEffectsMixin",
+      "FoliageColoursMixin",
+      "PlantBlockMixin"
     ],
 	"client": [
       "SoundMixin"
