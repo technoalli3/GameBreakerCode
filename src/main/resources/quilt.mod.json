@@ -19,7 +19,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.alli.gamebreaker.GameBreakerMain"
+			"init": "com.alli.gamebreaker.GameBreakerMain",
+			"client_init": "com.alli.gamebreaker.GameBreakerClient"
 		},
 		"depends": [
 			{
