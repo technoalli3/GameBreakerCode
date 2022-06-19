@@ -25,7 +25,8 @@
       "SlotMixin",
       "TransformMixin",
       "WeightedSoundsMixin",
-      "WorldRendererMixin"
+      "WorldRendererMixin",
+      "DilateSkeletonMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
