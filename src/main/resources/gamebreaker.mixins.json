@@ -19,7 +19,11 @@
       "HardcodedColourFixMixin",
       "BipedModelMixin",
       "HandledScreenMixin",
-      "QuadrupedModelMixin"
+      "QuadrupedModelMixin",
+      "RotateClockwiseMixin",
+      "ShuffleInventoryMixin",
+      "SlotMixin",
+      "TransformMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
