@@ -58,7 +58,7 @@ public class MathHelperMixin {
 		}
 	}
 
-	@Inject(method="clampAngle", at=@At("HEAD"), cancellable = true)
+	@Inject(method="stepAngleTowards", at=@At("HEAD"), cancellable = true)
 	private static void changeClampAngle(float value, float mean, float delta, CallbackInfoReturnable<Float> cir) {
 		if(CONFIG.breakRendering) {
 			float f = (value * mean) + mean;
