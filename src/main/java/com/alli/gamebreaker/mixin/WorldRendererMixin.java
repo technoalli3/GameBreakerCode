@@ -18,7 +18,7 @@ import static net.minecraft.client.gui.screen.ingame.BookScreen.BOOK_TEXTURE;
 @Mixin(WorldRenderer.class)
 public class WorldRendererMixin {
     @Shadow @Final
-    static Identifier END_SKY;
+    private static Identifier END_SKY;
 
     @Inject(method= "renderSky(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/util/math/Matrix4f;FLnet/minecraft/client/render/Camera;ZLjava/lang/Runnable;)V", at=@At(value="INVOKE", target="Lnet/minecraft/client/render/BufferBuilder;begin(Lnet/minecraft/client/render/VertexFormat$DrawMode;Lnet/minecraft/client/render/VertexFormat;)V", ordinal = 2))
     private void ChangeShader(MatrixStack matrices, Matrix4f projectionMatrix, float tickDelta, Camera camera, boolean bl, Runnable runnable, CallbackInfo ci) {
