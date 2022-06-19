@@ -1,6 +1,5 @@
 package com.alli.gamebreaker;
 
-import com.alli.gamebreaker.blocks.ModBlocks;
 import draylar.omegaconfig.OmegaConfig;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -26,6 +25,6 @@ public class GameBreakerMain implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ModBlocks.registerBlocks();
+
     }
 }
