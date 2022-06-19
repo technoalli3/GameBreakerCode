@@ -9,12 +9,17 @@
       "PlantBlockMixin",
       "DoublePerlinMixin",
       "ChunkNoiseMixin",
-      "CraftingResultMixin"
+      "CraftingResultMixin",
+      "CreeperEntityMixin",
+      "FloatingItemMixin",
+      "MathHelperMixin"
     ],
 	"client": [
       "SoundMixin",
       "HardcodedColourFixMixin",
-      "BipedModelMixin"
+      "BipedModelMixin",
+      "HandledScreenMixin",
+      "QuadrupedModelMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
