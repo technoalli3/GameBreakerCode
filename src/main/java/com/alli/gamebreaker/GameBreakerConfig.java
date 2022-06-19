@@ -7,25 +7,25 @@ import org.quiltmc.config.api.annotations.Comment;
 public class GameBreakerConfig extends WrappedConfig {
 
 	@Comment("Break rendering?")
-	public boolean breakRendering = false;
+	public final boolean breakRendering = false;
 
 	@Comment("Enable alternate world generation?")
-	public boolean altWorldGen = true;
+	public final boolean altWorldGen = true;
 
 	@Comment("Plants can be placed anywhere?")
-	public boolean plantAnywhere = true;
+	public final boolean plantAnywhere = true;
 
 	@Comment("Add gibberish to tooltips?")
-	public boolean addGibberish = true;
+	public final boolean addGibberish = true;
 
 	@Comment("Rotating clockwise?")
-	public boolean rotateClockwise = false;
+	public final boolean rotateClockwise = false;
 
 	@Comment("Override subtitles?")
-	public boolean overrideSubtitles = true;
+	public final boolean overrideSubtitles = true;
 
 	@Comment("Override sounds?")
-	public boolean overrideSounds = true;
+	public final boolean overrideSounds = true;
 
 	@Comment("""
             If the above is true, set the variable below according to the listed chart:
@@ -35,33 +35,33 @@ public class GameBreakerConfig extends WrappedConfig {
             3: Heh
 
             """)
-	public int chosenSound = 1;
+	public final int chosenSound = 1;
 
 	@Comment("Shuffle inventory?")
-	public boolean shuffleInventory = true;
+	public final boolean shuffleInventory = true;
 
 	@Comment("Extra-destructive creepers?")
-	public boolean extraDestruction = true;
+	public final boolean extraDestruction = true;
 
 	@Comment("Modify player model?")
-	public boolean modifyPlayer = true;
+	public final boolean modifyPlayer = true;
 
 	@Comment("Scale models?")
-	public boolean scaleModels = true;
+	public final boolean scaleModels = true;
 
 	@Comment("Rotate models?")
-	public boolean rotateModels = false;
+	public final boolean rotateModels = false;
 
 	@Comment("Randomly scale models?")
-	public boolean randomScale = false;
+	public final boolean randomScale = false;
 
 	@Comment("Items float?")
-	public boolean floatingItems = true;
+	public final boolean floatingItems = true;
 
 	@Comment("Rearrange inventory slots?")
-	public boolean rearrangeInventory = false;
+	public final boolean rearrangeInventory = false;
 
 	@Comment("If the above is true, changing this number\nwill change the delay IN TICKS between shuffles")
-	public int shuffleDelay = 3600;
+	public final int shuffleDelay = 3600;
 
 }
