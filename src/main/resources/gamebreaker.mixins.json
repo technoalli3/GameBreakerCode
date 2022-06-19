@@ -23,7 +23,9 @@
       "RotateClockwiseMixin",
       "ShuffleInventoryMixin",
       "SlotMixin",
-      "TransformMixin"
+      "TransformMixin",
+      "WeightedSoundsMixin",
+      "WorldRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
