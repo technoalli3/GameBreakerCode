@@ -7,11 +7,14 @@
       "BiomeEffectsMixin",
       "FoliageColoursMixin",
       "PlantBlockMixin",
-      "DoublePerlinMixin"
+      "DoublePerlinMixin",
+      "ChunkNoiseMixin",
+      "CraftingResultMixin"
     ],
 	"client": [
       "SoundMixin",
-      "HardcodedColourFixMixin"
+      "HardcodedColourFixMixin",
+      "BipedModelMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

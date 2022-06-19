@@ -9,12 +9,15 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import static com.alli.gamebreaker.GameBreakerMain.CONFIG;
+
 @Mixin(PlantBlock.class)
 public class PlantBlockMixin {
 
 	@Inject(method="canPlantOnTop", at=@At("HEAD"), cancellable = true)
 	private void changePlantCheck(BlockState floor, BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-		//wrap in isEnabled config
+		if(CONFIG.plantAnywhere) {
 			cir.setReturnValue(true);
+		}
 	}
 }
