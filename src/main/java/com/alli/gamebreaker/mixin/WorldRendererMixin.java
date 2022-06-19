@@ -19,12 +19,12 @@ import static net.minecraft.client.gui.screen.ingame.BookScreen.BOOK_TEXTURE;
 public class WorldRendererMixin {
 	@Shadow @Final private static Identifier END_SKY;
 
-	@Inject(method= "renderSky(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/util/math/Matrix4f;FLnet/minecraft/client/render/Camera;ZLjava/lang/Runnable;)V", at=@At(value="INVOKE", target="Lcom/mojang/blaze3d/vertex/BufferBuilder;begin(Lcom/mojang/blaze3d/vertex/VertexFormat$DrawMode;Lcom/mojang/blaze3d/vertex/VertexFormat;)V", ordinal = 1))
+	@Inject(method= "renderSky(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/util/math/Matrix4f;FLnet/minecraft/client/render/Camera;ZLjava/lang/Runnable;)V", at=@At(value="INVOKE", target="Lnet/minecraft/client/render/BufferBuilder;begin(Lnet/minecraft/client/render/VertexFormat$DrawMode;Lnet/minecraft/client/render/VertexFormat;)V"))
 	private void ChangeShader(MatrixStack matrices, Matrix4f projectionMatrix, float tickDelta, Camera camera, boolean bl, Runnable runnable, CallbackInfo ci) {
 		RenderSystem.setShaderTexture(0, BOOK_TEXTURE);
 	}
 
-	@Inject(method="renderClouds(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/util/math/Matrix4f;FDDD)V", at=@At(value="INVOKE", target="Lnet/minecraft/client/render/BackgroundRenderer;setShaderFogColor()V"))
+	@Inject(method="renderClouds(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/util/math/Matrix4f;FDDD)V", at=@At(value="INVOKE", target="Lnet/minecraft/client/render/BackgroundRenderer;setFogBlack()V"))
 	private void ChangeClouds(MatrixStack matrices, Matrix4f projectionMatrix, float tickDelta, double d, double e, double f, CallbackInfo ci) {
 		RenderSystem.setShaderTexture(0, END_SKY);
 	}
