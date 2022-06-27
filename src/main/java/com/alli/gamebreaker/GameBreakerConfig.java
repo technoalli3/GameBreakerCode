@@ -39,6 +39,9 @@ public class GameBreakerConfig extends WrappedConfig {
 	@Comment("Shuffle inventory?")
 	public final boolean shuffleInventory = true;
 
+	@Comment("If the above is true, changing this number\nwill change the delay IN TICKS between shuffles")
+	public final int shuffleDelay = 3600;
+
 	@Comment("Extra-destructive creepers?")
 	public final boolean extraDestruction = true;
 
@@ -59,8 +62,5 @@ public class GameBreakerConfig extends WrappedConfig {
 
 	@Comment("Rearrange inventory slots?")
 	public final boolean rearrangeInventory = false;
-
-	@Comment("If the above is true, changing this number\nwill change the delay IN TICKS between shuffles")
-	public final int shuffleDelay = 3600;
 
 }
